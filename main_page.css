@@ -1,0 +1,128 @@
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(0, 55, 255),rgb(0, 246, 246) );
+    background-attachment: fixed;
+    
+}
+.navigation ul{
+    position:absolute;
+    left:50%;
+    top:5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation li a{
+    position: relative;
+    display: block;
+   
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fde907;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+.navigation li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #fde907;
+    border-bottom: 2px solid #fde907;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+
+}
+.navigation ul li a::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fde907;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+.navigation ul li a:hover {
+    color:#012822;
+}
+.navigation ul li a:hover::before {
+    transform: scaleY(1);
+    opacity: 1;
+}
+.navigation ul li a:hover::after {
+    transform: scaleY(1);
+    opacity: 1;
+}
+.navigation img {
+    width: 20px;
+    height: 20px;
+
+}
+
+.prodect_image img {
+    height: 100%;
+    width: 200px;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.prodect_card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0);
+    transition: all 0.5s;
+    overflow: hidden;
+    width: 200px;
+}
+.prodect_card:hover .prodect_tittle {
+    color: red;
+}
+.prodect_info {
+    padding: 20px;
+}
+.prodect_tittle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.prodect_descreption {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: small;
+}
+.prodect_price {
+    color: #be0101;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.prodect_button {
+    background-color: #d71a1a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 80em;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.prodect_card:hover {
+    transform: translate(10%);
+    transition: all 0.7s;
+}
+.about {
+    color: #555;
+    padding: 10px;
+}
